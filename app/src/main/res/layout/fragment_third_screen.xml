@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.onboarding.screens.ThirdScreen">
+
+
+    <ImageView
+        android:id="@+id/farming_illustration"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/screen_three_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/lets_get_started"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        app:layout_constraintEnd_toEndOf="@+id/farming_illustration"
+        app:layout_constraintStart_toStartOf="@+id/farming_illustration"
+        app:layout_constraintTop_toBottomOf="@+id/farming_illustration" />
+
+    <Button
+        android:id="@+id/login_farmer"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/continue_as_farmer"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <Button
+        android:id="@+id/login_buyer"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/continue_as_buyer"
+        app:layout_constraintEnd_toEndOf="@+id/login_farmer"
+        app:layout_constraintStart_toStartOf="@+id/login_farmer"
+        app:layout_constraintTop_toBottomOf="@+id/login_farmer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

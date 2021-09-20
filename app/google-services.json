@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "620014737191",
+    "project_id": "modernhorticulture-7fb2d",
+    "storage_bucket": "modernhorticulture-7fb2d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:620014737191:android:7b1c722618b5e8d2ba3b02",
+        "android_client_info": {
+          "package_name": "ke.co.yadan.kiwianddragonhorticulture"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "620014737191-3u4j6ln78ues9oekgaj8v92ffatvj06b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ke.co.yadan.kiwianddragonhorticulture",
+            "certificate_hash": "35fd17924f7d5316cb02d1e752c2e59393c48c43"
+          }
+        },
+        {
+          "client_id": "620014737191-td25ebaotfc1ct40q5hrbbo1eleh029r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI0Z6S3t7fkQrMIlTVzkvMehYjswyZmtE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "620014737191-td25ebaotfc1ct40q5hrbbo1eleh029r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

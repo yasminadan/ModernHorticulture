@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/viewPagerFragment">
+
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="ke.co.yadan.kiwianddragonhorticulture.ui.fragments.onboarding.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" >
+        <action
+            android:id="@+id/action_viewPagerFragment_to_farmer_login_flow"
+            app:destination="@id/farmer_login_flow"
+            app:popUpTo="@id/viewPagerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <navigation android:id="@+id/farmer_login_flow"
+        app:startDestination="@id/signInFragment">
+        <fragment
+            android:id="@+id/signUpFragment"
+            android:name="ke.co.yadan.kiwianddragonhorticulture.ui.fragments.farmer.SignUpFragment"
+            android:label="fragment_sign_up"
+            tools:layout="@layout/fragment_sign_up" >
+            <action
+                android:id="@+id/action_signUpFragment_to_signInFragment"
+                app:destination="@id/signInFragment"
+                app:popUpTo="@id/signUpFragment"
+                app:popUpToInclusive="true" />
+            <action
+                android:id="@+id/action_signUpFragment_to_homeFragment"
+                app:destination="@id/homeFragment"
+                app:popUpTo="@id/signUpFragment"
+                app:popUpToInclusive="true" />
+        </fragment>
+        <fragment
+            android:id="@+id/signInFragment"
+            android:name="ke.co.yadan.kiwianddragonhorticulture.ui.fragments.farmer.SignInFragment"
+            android:label="fragment_sign_in"
+            tools:layout="@layout/fragment_sign_in" >
+            <action
+                android:id="@+id/action_signInFragment_to_signUpFragment"
+                app:destination="@id/signUpFragment"
+                app:popUpTo="@id/signUpFragment"
+                app:popUpToInclusive="true" />
+            <action
+                android:id="@+id/action_signInFragment_to_homeFragment"
+                app:destination="@id/homeFragment"
+                app:popUpTo="@id/signInFragment"
+                app:popUpToInclusive="true" />
+        </fragment>
+        <fragment
+            android:id="@+id/homeFragment"
+            android:name="ke.co.yadan.kiwianddragonhorticulture.ui.fragments.farmer.HomeFragment"
+            android:label="fragment_home"
+            tools:layout="@layout/fragment_home" >
+            <action
+                android:id="@+id/action_homeFragment_to_fruitDescriptionFragment"
+                app:destination="@id/fruitDescriptionFragment"
+                app:launchSingleTop="true" />
+            <action
+                android:id="@+id/action_homeFragment_to_sellFruitFragment"
+                app:destination="@id/sellFruitFragment" />
+            <action
+                android:id="@+id/action_homeFragment_to_advertisementsFragment"
+                app:destination="@id/advertisementsFragment" />
+            <action
+                android:id="@+id/action_homeFragment_to_signInFragment"
+                app:destination="@id/signInFragment"
+                app:popUpTo="@id/homeFragment"
+                app:popUpToInclusive="true" />
+        </fragment>
+        <fragment
+            android:id="@+id/fruitDescriptionFragment"
+            android:name="ke.co.yadan.kiwianddragonhorticulture.ui.fragments.farmer.FruitDescriptionFragment"
+            android:label="fragment_fruit_description"
+            tools:layout="@layout/fragment_fruit_description" >
+            <action
+                android:id="@+id/action_fruitDescriptionFragment_to_homeFragment"
+                app:destination="@id/homeFragment"
+                app:popUpTo="@id/fruitDescriptionFragment"
+                app:popUpToInclusive="true" />
+            <argument
+                android:name="fruit_name"
+                app:argType="string" />
+        </fragment>
+        <fragment
+            android:id="@+id/sellFruitFragment"
+            android:name="ke.co.yadan.kiwianddragonhorticulture.ui.fragments.farmer.SellFruitFragment"
+            android:label="fragment_sell_fruit"
+            tools:layout="@layout/fragment_sell_fruit" >
+            <action
+                android:id="@+id/action_sellFruitFragment_to_homeFragment"
+                app:destination="@id/homeFragment"
+                app:popUpTo="@id/sellFruitFragment"
+                app:popUpToInclusive="true" />
+            <argument
+                android:name="username"
+                app:argType="string" />
+        </fragment>
+        <fragment
+            android:id="@+id/advertisementsFragment"
+            android:name="ke.co.yadan.kiwianddragonhorticulture.ui.fragments.farmer.AdvertisementsFragment"
+            android:label="fragment_advertisements"
+            tools:layout="@layout/fragment_advertisements" >
+            <action
+                android:id="@+id/action_advertisementsFragment_to_homeFragment"
+                app:destination="@id/homeFragment"
+                app:popUpTo="@id/advertisementsFragment"
+                app:popUpToInclusive="true" />
+            <argument
+                android:name="username"
+                app:argType="string" />
+        </fragment>
+    </navigation>
+</navigation>
